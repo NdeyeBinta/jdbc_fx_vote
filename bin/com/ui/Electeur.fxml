@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ui.ElecteurController">
+   <children>
+      <Label layoutX="21.0" layoutY="14.0" text="CIN" />
+      <Label layoutX="21.0" layoutY="66.0" text="Nom" />
+      <Label layoutX="21.0" layoutY="142.0" text="Prenom" />
+      <TextField fx:id="cin_txt" layoutX="21.0" layoutY="31.0" />
+      <TextField fx:id="nom_txt" layoutX="21.0" layoutY="95.0" />
+      <TextField fx:id="prenom_txt" layoutX="21.0" layoutY="164.0" />
+      <TableView fx:id="electeur_table" layoutX="177.0" layoutY="32.0" onMouseClicked="#tableClick" prefHeight="200.0" prefWidth="303.0">
+        <columns>
+          <TableColumn fx:id="cinColumn" prefWidth="101.0" text="CIN" />
+          <TableColumn fx:id="nomColumn" prefWidth="87.0" text="Nom" />
+            <TableColumn fx:id="prenomColumn" prefWidth="112.0" text="Prenom" />
+        </columns>
+      </TableView>
+      <Button fx:id="valider_btn" layoutX="31.0" layoutY="249.0" mnemonicParsing="false" onAction="#valider" text="valider" />
+      <Button fx:id="annuler_btn" layoutX="96.0" layoutY="249.0" mnemonicParsing="false" onAction="#annuler" text="annuler" />
+      <Button fx:id="votez_btn" layoutX="414.0" layoutY="249.0" mnemonicParsing="false" onAction="#votez" text="VOTEZ" />
+      <Button fx:id="modifier_btn" layoutX="177.0" layoutY="249.0" mnemonicParsing="false" onAction="#modifier" text="Modifier" />
+      <Button fx:id="supprimer_btn" layoutX="258.0" layoutY="249.0" mnemonicParsing="false" onAction="#supprimer" text="supprimer" />
+   </children>
+</AnchorPane>
